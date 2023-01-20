@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "a057e093-fd0e-4f13-83bd-3a97b895f653",
+		"name": "Notification System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5550987"
+	},
+	"item": [
+		{
+			"name": "Create Notification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n        \"title\":\"Credit card\",\n        \"content\": \"hello i am Imran\",\n        \"userNotification\":{\n            \"fromUser\":1,\n            \"toUser\":2\n        }\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/notification/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"notification",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Notifications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/notification/getAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"notification",
+						"getAll"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "15",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Publish Notification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n        \"title\":\"Hello\",\n        \"content\": \"I am applying for new credit card\",\n        \"userNotification\":{\n            \"fromUser\":1,\n            \"toUser\":2\n        }\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/notification/publish",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"notification",
+						"publish"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

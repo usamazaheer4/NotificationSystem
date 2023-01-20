@@ -1,0 +1,8 @@
+{
+  "title":"Hello",
+  "content": "I am applying for new credit card",
+  "userNotification":{
+    "fromUser":1,
+    "toUser":2
+  }
+}
